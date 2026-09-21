@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= titulo %> | Salas de estudio</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Salas de estudio</h1>
+    <nav aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/reservas">Reservas</a>
+      <a href="/reservas/nueva">Nueva reserva</a>
+      <a href="/estado">Estado</a>
+    </nav>
+  </header>
+
+  <main>
+    <% if (typeof seccion !== "undefined") { %>
+      <p><strong><%= seccion %></strong></p>
+    <% } %>
+    <%- body %>
+  </main>
+
+  <footer>
+    Solicitud: <%= solicitudId %>
+  </footer>
+</body>
+</html>
